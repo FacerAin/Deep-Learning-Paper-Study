@@ -19,7 +19,7 @@ DNN(Deep Neural Network)는 복잡한 학습 과정을 수행하는 강력한 �
 
 따라서 본 Paper에서는 **End-To-End** 접근 방식을 제안함. 다층 LSTM(Long-Short-Term-Memory)를 사용. Input Sequence를 고정된 차원의 벡터에 매핑한 후 다른 deep LSTM에서 대상 시퀀스를 디코딩한다. WMT-14 데이터셋으로부터 영어-프랑스어 번역 작업을 수행하여 34.8의 BLEU 스코어를 달성했다. 이때 **out-of-vocabulary words** 때문에 점수의 하락이 있었음.
 추가로 **길이가 긴 문장을 제외**시켰다. 같은 데이터셋에 대해 pharse-based SMT system은 33.3의 BLEU 스코어를 달성했다.  
-👉 LSTM 기반의 S2S 모델을 사용하여 구문 기반 SMT에 비해 성능 향상이 있었다.
+👉 LSTM 기반의 S2S 모델을 사용하여 구문 기반 SMT에 비해 성능 향상이 있었다. 하지만 out-of-vocabulary와 Long Sentence는 해결하지 못했다.
 
 When we used the LSTM to rerank the 1000 hypotheses produced by the aforementioned SMT system, its
 BLEU score increases to 36.5, which is close to the previous state of the art.  
