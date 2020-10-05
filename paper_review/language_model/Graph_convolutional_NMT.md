@@ -26,8 +26,13 @@ Sequential encoder-decoders 모델은 NMT에서 State-of-the-art 성능을 보�
 
 기존 연구들에서 간접적인 방법으로 구문 정보를 NMT 모델에 통합하거나(eg.Multi-task learning) Syntax 와 Translation task 사이의 인터페이스를 모델링하는데 제한적일 수 있었다.(eg. learning representations of linguistic phrases)
 
-연구의 목표는 인코더에게 _풍푸한 구문 정보(Syntatic information)을 접근_ 할 수 있도록 제공하지만, \*Syntax와 Translation task 사이 상호작용에 제약을 두지 않고, MT가 구문의 어떤 측면이이 이로운지 결정\* 하게 하는 것이다.
+연구의 목표는 인코더에게 _풍부한 구문 정보(Syntatic information)을 접근_ 할 수 있도록 제공하지만, *Syntax와 Translation task 사이 상호작용에 제약을 두지 않고, MT가 구문의 어떤 측면이 이로운지 결정* 하게 하는 것이다.
 
 엄격한 구문적 제약은 MT를 해를 끼친다는 주장(Andreas Zollmann and Ashish Venugopal. 2006.)과 일치하며, 위 연구는 전통적인 MT에서 이루어졌지만, NMT 방식에도 적용된다고 생각한다.
+
+어텐션 기반의 NMT 시스템은 Source 문장 단어로서 인코더에서 잠재적인 특징(Latent-feature) 벡터로 표현한다. 그리고 번역문을 생성할 때 이 벡터를 사용한다.  
+연구의 목표는 이러한 특징 벡터에 Source 단어의 통사적 이웃(syntactic neighborhoods)에 대한 정보를 자동으로 통합하여 잠재적으로 번역 결과의 품질을 향상시키는 것이다.  
+
+단어들은 벡터에 해당하기 때문에, 종속성  구문을 사용하는 것은 당연하다. 
 
 TBA
